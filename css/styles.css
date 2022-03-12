@@ -151,6 +151,34 @@ p {
   background: var(--clr-primary-8);
 }
 
+.section {
+  padding: 5rem 0;
+}
+
+.section_title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section_title h2 {
+  text-transform: uppercase;
+}
+
+.section_title h2 span {
+  color: var(--clr-primary-5);
+}
+
+.section_center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
 /*
 =============== 
 Navbar
@@ -225,6 +253,47 @@ About
 ===============
 */
 /* section add to globals */
+
+.about_img,
+.about_info {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about_center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about_img,
+  .about_info {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  @media screen and (min-width: 1170px) {
+    .about_img::before {
+      content: "";
+      position: absolute;
+      border: 0.5rem solid var(--clr-primary-5);
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      top: -1.5rem;
+      left: -1.5rem;
+      /* z-index: -1; */
+    }
+    .about_img {
+      position: relative;
+    }
+    .about_photo {
+      position: relative;
+    }
+  }
+}
+
 /* title add to globals */
 /* section center add to globals */
 
@@ -234,11 +303,139 @@ Services
 ===============
 */
 
+#services {
+  background-color: var(--clr-grey-10);
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services_icon {
+  background-color: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  padding: 0.5rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.service_text {
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 576px) {
+  .services_center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .service {
+    display: flex;
+    gap: 0rem 1rem;
+    text-align: left;
+  }
+
+  .service_icon {
+    align-self: start;
+  }
+
+  .service_info h4 {
+    margin-bottom: 0.25rem;
+  }
+}
+
 /*
 =============== 
 Featured Tours
 ===============
 */
+
+.tour-card {
+  transition: var(--transition);
+  background: var(--clr-grey-10);
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2rem;
+}
+
+.tour-img-container {
+  position: relative;
+}
+
+.tour-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+
+.tour-img {
+  height: 15rem;
+  object-fit: cover;
+}
+
+.tour-date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--clr-primary-8);
+  margin: 0;
+  color: var(--clr-primary-1);
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+}
+
+.tour-info {
+  padding: 1.25rem;
+}
+
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tour-footer p {
+  line-height: 0;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  color: var(--clr-primary-5);
+}
+
+.tour-btn {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .featured-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .tour-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .tour-card {
+    flex: 0 0 calc(33.333% - 2rem);
+  }
+}
 
 /*
 =============== 
@@ -256,4 +453,4 @@ Gallery
 =============== 
 Footer
 ===============
-*/
+*/ ;
